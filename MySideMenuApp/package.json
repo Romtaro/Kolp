@@ -1,7 +1,7 @@
 {
-  "name": "mysidemenuapp",
+  "name": "kolp",
   "version": "1.1.1",
-  "description": "MySideMenuApp: An Ionic project",
+  "description": "kolp: An YNOV project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",

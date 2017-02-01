@@ -1,7 +1,7 @@
 
 {
-  "name": "My Ionic App",
-  "short_name": "My Ionic App",
+  "name": "KOLP - Application de musique par géolocalisation",
+  "short_name": "KOLP",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
