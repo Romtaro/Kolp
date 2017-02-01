@@ -8,13 +8,20 @@
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
       </ion-nav-buttons>
+
+      <ion-nav-buttons side="right">
+        <button class="button menu-close" ng-click="login()" menu-toggle="right">
+          Connexion
+        </button>
+
+      </ion-nav-buttons>
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
 
   <ion-side-menu side="left">
     <ion-header-bar class="bar-stable">
-      <h1 class="title">Menu</h1>
+      <h1 class="title">Menu - KOLP</h1>
     </ion-header-bar>
     <ion-content>
       <ion-list>
@@ -29,6 +36,19 @@
         </ion-item>
         <ion-item menu-close href="#/app/playlists">
           Les playlists
+        </ion-item>
+        <ion-item menu-close href="#/app/account">
+          Compte
+        </ion-item>
+        <ion-item menu-close href="#/app/offer">
+          Offre abonnement
+        </ion-item>
+        <hr>
+        <ion-item menu-close href="#/app/settings">
+          Paramètres
+        </ion-item>
+        <ion-item menu-close href="#/app/about">
+          A propos
         </ion-item>
       </ion-list>
     </ion-content>
