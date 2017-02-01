@@ -68,7 +68,44 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
       }
     }
-  });
+  })
+
+    .state('app.about', {
+      url: '/about',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/about.html'
+        }
+      }
+    })
+
+
+      .state('app.offer', {
+        url: '/offer',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/offer.html'
+          }
+        }
+      })
+
+    .state('app.account', {
+      url: '/account',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/account.html'
+        }
+      }
+    })
+
+      .state('app.settings', {
+        url: '/settings',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/settings.html'
+          }
+        }
+      });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');
 });
