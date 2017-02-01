@@ -49,7 +49,7 @@ angular.module('starter.controllers', [])
     { title: 'Psy', id: 4 },
     { title: 'Mental', id: 5 },
     { title: 'Acid', id: 6 },
-    { title: 'Core', id: 7 },
+    { title: 'Jazz', id: 7 },
     { title: 'Trance', id: 8 },
     { title: 'Rock', id: 9 },
     { title: 'Pop', id: 10 },
