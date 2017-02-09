@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/MySideMenuApp.iml" filepath="$PROJECT_DIR$/.idea/MySideMenuApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MySideMenuApp.iml" filepath="$PROJECT_DIR$/.idea/modules/MySideMenuApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/geolapi/geolapi.iml" filepath="$PROJECT_DIR$/.idea/modules/geolapi/geolapi.iml" />
     </modules>
   </component>
 </project>

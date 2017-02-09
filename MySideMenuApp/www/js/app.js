@@ -107,6 +107,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
+    .state('app.geoapi', {
+      url: '/geoapi',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/geoapi.html'
+        }
+      }
+    })
+
       .state('app.settings', {
         url: '/settings',
         views: {
