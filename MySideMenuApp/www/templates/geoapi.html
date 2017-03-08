@@ -1,24 +1,14 @@
-<ion-content>
+
   <!-- <div id="mapp"></div>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1bUFtnSZy6B5C0ySg5tMNZ_hd31Wt-gk&callback=initMap"></script>
   <script type="text/javascript" src="js/geoapi.js"></script>
   <div id="infoposition"> Position en cours de détermination [beta] </div> -->
-<script type="text/javascript">
-  import { Geolocation } from 'ionic-native';
-
-
-  Geolocation.getCurrentPosition().then((resp) => {
-  // resp.coords.latitude
-  // resp.coords.longitude
-  }).catch((error) => {
-  console.log('Error getting location', error);
-  });
-
-  let watch = Geolocation.watchPosition();
-  watch.subscribe((data) => {
-  // data can be a set of coordinates, or an error (if an error occurred).
-  // data.coords.latitude
-  // data.coords.longitude
-  });
-  </script>
-</ion-content>
+  <ion-view view-title="Geolocalisation">
+  <ion-content>
+    <ion-content class="home">
+      <div id="map_canvas"></div>
+    </ion-content>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjYk8ul3RXplujSBlJRbgd0fx6WCVv06I&callback=initialize"></script>
+    <script type="text/javascript" src="../js/Script.js"></script>
+  </ion-content>
+</ion-view>
