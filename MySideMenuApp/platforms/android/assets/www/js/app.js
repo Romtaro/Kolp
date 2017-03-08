@@ -41,11 +41,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.youtube', {
+    url: '/youtube',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/youtube.html'
       }
     }
   })
@@ -106,6 +106,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+
+
 
     .state('app.geoapi', {
       url: '/geoapi',
