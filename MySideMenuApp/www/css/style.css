@@ -1,1 +1,7 @@
-#mapp { height: 95%; }
+#map {     width: auto;
+                  height:91.5%; }
+
+#emp_map {
+width:auto;
+height:150px;
+}
