@@ -32,88 +32,88 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-  .state('app.home', {
-    url: '/home',
+  .state('app.pageVoteDiffuseur2', {
+    url: '/pageVoteDiffuseur2',
     views: {
       'menuContent': {
-        templateUrl: 'templates/home.html'
+        templateUrl: 'templates/pageVoteDiffuseur2.html'
       }
     }
   })
 
-  .state('app.youtube', {
-    url: '/youtube',
+  .state('app.youtubePageTest', {
+    url: '/youtubePageTest',
     views: {
       'menuContent': {
-        templateUrl: 'templates/youtube.html'
+        templateUrl: 'templates/youtubePageTest.html'
       }
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
+  .state('app.pageGeolo3', {
+      url: '/pageGeolo3',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/pageGeolo3.html'
         }
       }
     })
-    .state('app.playlists', {
-      url: '/playlists',
+    .state('app.pagePlaylistEnCour4', {
+      url: '/pagePlaylistEnCour4',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlists.html',
+          templateUrl: 'templates/pagePlaylistEnCour4.html',
           controller: 'PlaylistsCtrl'
         }
       }
     })
 
-  .state('app.single', {
-    url: '/playlists/:playlistId',
+  .state('app.pageRechercheAjout5', {
+    url: '/pageRechercheAjout5',
     views: {
       'menuContent': {
-        templateUrl: 'templates/playlist.html',
+        templateUrl: 'templates/pageRechercheAjout5.html',
         controller: 'PlaylistCtrl'
 
       }
     }
   })
 
+    .state('app.pageMesPlaylist6', {
+      url: '/pageMesPlaylist6',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/pageMesPlaylist6.html'
+        }
+      }
+    })
+
+
+      .state('app.pageCreerPlaylist7', {
+        url: '/pageCreerPlaylist7',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/pageCreerPlaylist7.html'
+          }
+        }
+      })
+
+    .state('app.pageMonCompte8', {
+      url: '/pageMonCompte8',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/pageMonCompte8.html'
+        }
+      }
+    })
+
+
+
     .state('app.about', {
       url: '/about',
       views: {
         'menuContent': {
           templateUrl: 'templates/about.html'
-        }
-      }
-    })
-
-
-      .state('app.offer', {
-        url: '/offer',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/offer.html'
-          }
-        }
-      })
-
-    .state('app.account', {
-      url: '/account',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/account.html'
-        }
-      }
-    })
-
-
-
-    .state('app.geoapi', {
-      url: '/geoapi',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/geoapi.html'
         }
       }
     })
@@ -127,5 +127,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/home');
+  $urlRouterProvider.otherwise('/app/pageVoteDiffuseur2');
 });
