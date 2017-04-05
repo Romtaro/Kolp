@@ -1,4 +1,16 @@
-#mapp { height: 95%; }
+/*css page geolocation */
+#map {
+      width: 100%;
+      height:91.5%;
+
+      position:absolute;
+}
+
+#emp_map {
+      width:auto;
+      height:150px;
+}
+
 /*css page youtube*/
      * {
         box-sizing: border-box;
@@ -193,3 +205,4 @@
         background: #FFACAC;
       }
 /*fin*/
+>>>>>>> b3b91a0532b8745309f0860d0d0fa9f4e3aa14df
