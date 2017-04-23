@@ -79,6 +79,17 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+
+
+    .state('app.pageMonCompte8', {
+      url: '/pageMonCompte8',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/pageMonCompte8.html'
+        }
+      }
+    })
+
     .state('app.pageMesPlaylist6', {
       url: '/pageMesPlaylist6',
       views: {
@@ -97,17 +108,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           }
         }
       })
-
-    .state('app.pageMonCompte8', {
-      url: '/pageMonCompte8',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/pageMonCompte8.html'
-        }
-      }
-    })
-
-
 
     .state('app.about', {
       url: '/about',
