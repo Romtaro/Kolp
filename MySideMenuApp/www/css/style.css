@@ -74,6 +74,8 @@ color:white;
 
 .no-bottom { margin-top: 0%; z-index: 7;}
 
+.logo_kolp {display: none;}
+
 .logo_kolp, .logo_kolp_gif {width: 180px;height:  150px; position:absolute;margin-right: 2%;}
 
 .logo_kolp_gif {display: none;}
