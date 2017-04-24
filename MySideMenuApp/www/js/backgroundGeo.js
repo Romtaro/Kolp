@@ -33,10 +33,12 @@ function initMap() {
     if(navigator.geolocation) {
         function maPosition(position) {
                      var ny = getWindowHeight();
+                     console.log(ny);
+                     ny = ny - (ny*(3.5/100))
                      console.log("Height : " + ny );
                      ny +="px";
                      console.log(ny);
-                     document.getElementById("emp_map").style.height = ny;
+                     document.getElementById("map").style.height = ny;
                      document.getElementById("loader-wait").style.display = "none";
             var infopos = "Position déterminée :\n";
             infopos += "\nLatitude : " + position.coords.latitude + "\n";
