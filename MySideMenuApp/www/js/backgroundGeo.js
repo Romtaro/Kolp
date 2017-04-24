@@ -33,11 +33,11 @@ function initMap() {
     if(navigator.geolocation) {
         function maPosition(position) {
                      var ny = getWindowHeight();
-                     console.log(ny);
+                     console.log("Height 100% : " + ny);
                      ny = ny - (ny*(3.5/100))
-                     console.log("Height : " + ny );
+                     console.log("Height 96.5% : " + ny );
                      ny +="px";
-                     console.log(ny);
+                     console.log("Height 96.5% : " + ny);
                      document.getElementById("map").style.height = ny;
                      document.getElementById("loader-wait").style.display = "none";
             var infopos = "Position déterminée :\n";
@@ -45,10 +45,26 @@ function initMap() {
             infopos += "\nLongitude: " + position.coords.longitude + "\n";
             document.getElementById("info").innerHTML = infopos;
 
+            var myLating = {lat: position.coords.latitude, lng: position.coords.longitude}
+console.log(myLating);
             map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: position.coords.latitude, lng: position.coords.longitude},
-                zoom: 6,
+                center: myLating,
+                zoom: 16,
                 mapTypeId: google.maps.MapTypeId.ROAD
+            });
+
+            var marker = new google.maps.Marker({
+            position: myLating,
+            sensor: true,
+            map: map,
+
+        });
+
+            google.maps.event.addListener(map, 'click', function(event) {
+                addMarker(event.latLng, map);
+                var ev_ll = event.latLng;
+                localStorage.removeItem("loc_eventlatLng");
+                localStorage.setItem("loc_eventlatLng", ev_ll);
             });
         }
 
