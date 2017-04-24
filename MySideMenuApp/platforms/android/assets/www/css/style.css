@@ -34,30 +34,12 @@
 
 .button_vote a, .button_diffu a {text-decoration: none;color:white;}
 
-.button_vote a, .button_diffu a {
+.button_vote:hover, .button_diffu:hover {
 transition-duration: .5s;
 transition-timing-function: ease-in-out;
 }
 
-@media screen and (max-width:768px)
-{
-    #info {
-    margin-right:-15px;
-    margin-top:-5px;
-    width:155px;
-    }
 
-    .button_diffu, .button_vote {
-      display: grid;
-      font-size: 17px;
-    }
-
-    .button_diffu:hover, .button_vote:hover {
-      font-size: 20px;
-    }
-
-    .logo_kolp {display: none;}
-}
 .menu {
 background-color:#086A87;
 color:white;
@@ -121,6 +103,35 @@ margin-right:auto;
 
 .acc_img_gmap {
 width: 14%;
+}
+
+
+@media screen and (max-width:768px)
+{
+    #info {
+    margin-right:-15px;
+    margin-top:-5px;
+    width:155px;
+    }
+
+    .button_diffu, .button_vote {
+      font-size: 17px;
+    }
+
+    .button_diffu:hover, .button_vote:hover {
+      font-size: 20px;
+    }
+
+    .logo_kolp {display: none;}
+
+    .pop_up_login {
+      border-radius: 0px;
+      width: 100%;
+      margin-left: 0px;
+      margin-right: 0px;
+      height: 300px;
+    }
+
 }
 
 /*css page youtube*/
