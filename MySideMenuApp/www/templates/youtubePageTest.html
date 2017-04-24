@@ -1,13 +1,11 @@
 <ion-view view-title="Search">
     <script src="./js/yout.js" ></script>
   <ion-content>
-    <h1>API-YouTube</h1>
-  <p>Enter a search term.</p>
-  <p>Get back the top 5 most viewed youtube videos</p>
+
   <form id="search-term">
-    <input type="text" value="" placeholder="" size="20" id="query">
+    <input type="text" value="" placeholder="" size="30" id="query">
     <!-- Remove asdf later -->
-    <button type="submit">My Button</button>
+    <button ion-button class='button button-full'(click)="submit">Recherche</button>
   </form>
   <div id="search-results">
   </div>

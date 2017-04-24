@@ -38,7 +38,7 @@ function getRequest(searchTerm) {
   url = 'https://www.googleapis.com/youtube/v3/search';
 
   $.getJSON(url, params, function(data) {
-    console.log(data);
+
     showResults(data.items);
   });
 };
@@ -46,9 +46,21 @@ function getRequest(searchTerm) {
 function showResults(results) {
   var html = "";
   //console.log(results);
+ var tab=[];
   $.each(results, function(index, value) {
+    tab.push(value.id.videoId);
+    html += '<button ion-button class=\'button\' (click)=\'url()\'>';
     html += '<a href="https://www.youtube.com/watch?v=' + value.id.videoId + '"' + 'target="_blank"> <p><img src=' + value.snippet.thumbnails.high.url + ' width="380" height="260"></p></a>';
+    html +='</button>';
     //console.log("https://www.youtube.com/watch?v=" + value.id.videoId);
+
+  //console.log(tab);
   });
   $('#search-results').html(html);
+    console.log(tab);// on recupe fin de url dans un tableau oklm
 };
+
+function url(){
+  console.log('coucou');
+//console.log(tab);
+}
