@@ -75,7 +75,7 @@ color:white;
 
 .no-bgblue { background-color:rgba(255, 255, 255, 0.4);}
 .logo_kolp img {margin-top: 1%;position: relative;float: right;}
-.logo_kolp {display: inline-flex;}
+.logo_kolp {display: inline-table;}
 .logo_kolp .welco {float: left;}
 .bg_blue {margin-bottom:3%;margin-left:auto;margin-right:auto;width:200px;background-color:rgba(0, 0, 0, 0.4);}
  hr {width:25%;}
