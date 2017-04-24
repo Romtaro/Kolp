@@ -1,4 +1,5 @@
 // Load the IFrame Player API code asynchronously.
+
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/player_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -31,7 +32,7 @@ function getRequest(searchTerm) {
     safeSearch: 'none',
     q: searchTerm,
     type: 'video',
-    maxResults: '5',
+    maxResults: '10',
     key: 'AIzaSyDSRCxZb9YtVsb7AwvHYmcftv0_zFddVxY',
   };
   url = 'https://www.googleapis.com/youtube/v3/search';
