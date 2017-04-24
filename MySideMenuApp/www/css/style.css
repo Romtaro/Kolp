@@ -23,6 +23,38 @@
     width:155px;
     }
 }
+.btt {
+  display: inline-grid;
+  width:45%;
+  height: 35%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 100, 70, 0.3);
+  margin-top: 3%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 5%;
+  background-color: rgba(0, 160, 130, 0.4);
+  text-align: center;
+  padding: 7.5%;
+  padding-left: 7%;
+  font-size: 28px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btt:hover {
+  background-color: rgba(0, 200, 170, 0.5);
+  box-shadow: 0px 0px 20px rgba(0, 100, 70, 0.3);
+  border-radius: 30px;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
+  font-size: 40px;
+}
+
+.button_diffu {}
+
+.button_vote {}
 
 .menu {
 background-color:#086A87;
@@ -41,8 +73,10 @@ color:white;
   background-color:#F2F2F2;
 }
 
-.no-bgblue { background-color:#fff;}
-
+.no-bgblue { background-color:rgba(255, 255, 255, 0.4);}
+.logo_kolp img {margin-top: 1%;position: relative;float: right;}
+.logo_kolp {display: inline-flex;}
+.logo_kolp .welco {float: left;}
 .bg_blue {margin-bottom:3%;margin-left:auto;margin-right:auto;width:200px;background-color:rgba(0, 0, 0, 0.4);}
  hr {width:25%;}
 .bgabout {margin-left:auto;
@@ -50,25 +84,30 @@ margin-right:auto;
  text-align:center;}
 .welcome_panel_1 {
   width:80%;
-  height:auto;
+  height:700px;
   background-color:rgba(230, 230, 230, 0.8);
   border-radius:10px;
   box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.55);
   color:white;
-  margin-top:3%;
+  margin-top:1%;
   margin-left:4.5%;
   margin-right:5%;
+  margin-bottom: 1%;
   position:absolute;
   left:5%;
   padding:3%;
+  text-align: center;
 }
 
 .welcome_panel_1 img {
-  width:22%;
+  width:15%;
   height:auto;
   display:inline-grid;
   position:relative;
-  margin-left:20%;
+}
+
+.welcome_panel_1 .acc_img_gmap {
+width: 10.5%;
 }
 
 /*css page youtube*/
