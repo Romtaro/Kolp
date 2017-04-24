@@ -27,7 +27,7 @@
   overflow: hidden;
   min-height: 100%;
   width: 100%;
-  background-color: $modal-bg-color;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 @media (min-width: $modal-inset-mode-break-point) {
@@ -75,12 +75,12 @@
 
   .modal-backdrop-bg {
     @include transition(opacity 300ms ease-in-out);
-    background-color: $modal-backdrop-bg-active;
+    background-color:rgba(24, 121, 125, 0.5);
     opacity: 0;
   }
 
   .active .modal-backdrop-bg {
-    opacity: 0.5;
+    opacity: 0.2;
   }
 }
 
