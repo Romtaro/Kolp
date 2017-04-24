@@ -3,16 +3,15 @@ var labels = "12345678910111213141516171819";
 var labelIndex = 0;
 var nbrmark;
 
-
 function getWindowHeight() {
-    var windowHeight=0;
-    if (typeof(window.innerHeight)=='number') {
-        windowHeight=window.innerHeight;
+    var windowHeight = 0;
+    if (typeof(window.innerHeight) =='number') {
+        windowHeight = window.innerHeight;
     } else {
-        if (document.documentElement&& document.documentElement.clientHeight) {
+        if (document.documentElement && document.documentElement.clientHeight) {
             windowHeight = document.documentElement.clientHeight;
         } else {
-            if (document.body&&document.body.clientHeight) {
+            if (document.body && document.body.clientHeight) {
                 windowHeight=document.body.clientHeight;
             }
         }
@@ -25,28 +24,29 @@ function chg_height() {
              console.log("Height : " + ny );
              ny +="px";
              console.log(ny);
-             document.getElementById("emp_map").style.height = ny;
-        }
+             document.getElementById("map").style.height = ny;
+           }
 
 
 function initMap() {
     if(navigator.geolocation) {
         function maPosition(position) {
-                     var ny = getWindowHeight();
-                     console.log("Height 100% : " + ny);
-                     ny = ny - (ny*(3.5/100))
-                     console.log("Height 96.5% : " + ny );
-                     ny +="px";
-                     console.log("Height 96.5% : " + ny);
-                     document.getElementById("map").style.height = ny;
-                     document.getElementById("loader-wait").style.display = "none";
+            var ny = getWindowHeight();
+            console.log("Height 100% : " + ny);
+            ny = ny - (ny*(3.5/100))
+            console.log("Height 96.5% : " + ny );
+            ny +="px";
+            console.log("Height 96.5% : " + ny);
+            document.getElementById("map").style.height = ny;
+            document.getElementById("loader-wait").style.display = "none";
             var infopos = "Position déterminée :\n";
             infopos += "\nLatitude : " + position.coords.latitude + "\n";
             infopos += "\nLongitude: " + position.coords.longitude + "\n";
+            document.getElementById("info").style.display = "block";
             document.getElementById("info").innerHTML = infopos;
 
             var myLating = {lat: position.coords.latitude, lng: position.coords.longitude}
-console.log(myLating);
+            console.log(myLating);
             map = new google.maps.Map(document.getElementById('map'), {
                 center: myLating,
                 zoom: 16,
