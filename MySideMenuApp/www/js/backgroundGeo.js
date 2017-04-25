@@ -31,19 +31,20 @@ function chg_height() {
 function initMap() {
     if(navigator.geolocation) {
         function maPosition(position) {
-            var ny = getWindowHeight();
-            console.log("Height 100% : " + ny);
-            ny = ny - (ny*(3.5/100))
-            console.log("Height 96.5% : " + ny );
-            ny +="px";
-            console.log("Height 96.5% : " + ny);
-            document.getElementById("map").style.height = ny;
-            document.getElementById("loader-wait").style.display = "none";
+            if (document.getElementById("map")){
+              var ny = getWindowHeight();
+              console.log("Height 100% : " + ny);
+              ny = ny - (ny*(3.5/100));
+              ny +="px";
+              console.log("Height utilisé pour la map : " + ny);
+            document.getElementById("map").style.height = ny;}
+            if (document.getElementById("loader-wait")){document.getElementById("loader-wait").style.display = "none";}
             var infopos = "Position déterminée :\n";
             infopos += "\nLatitude : " + position.coords.latitude + "\n";
             infopos += "\nLongitude: " + position.coords.longitude + "\n";
+            if (document.getElementById("info")){
             document.getElementById("info").style.display = "block";
-            document.getElementById("info").innerHTML = infopos;
+            document.getElementById("info").innerHTML = infopos;}
 
             var myLating = {lat: position.coords.latitude, lng: position.coords.longitude}
             console.log(myLating);
@@ -69,7 +70,7 @@ function initMap() {
         }
 
         navigator.geolocation.getCurrentPosition(maPosition);
-        console.log("navigator.geolocation.getCurrentPosition(maPosition); -- DONE")
+    //    console.log("navigator.geolocation.getCurrentPosition(maPosition); -- DONE")
     }
     else {
         var infopos = "Position indéterminée - Error API :\n";
