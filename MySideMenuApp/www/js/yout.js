@@ -44,17 +44,24 @@ function getRequest(searchTerm) {
 };
 function urli(val){
   console.log(val);
-//console.log(tab);
+  player = new YT.Player('search-results', {
+    height: '390',
+    width: '640',
+    videoId: val[0]
+//console.log(val);
+});
 }
+
 function showResults(results) {
   var html = "";
   //console.log(results);
 
   $.each(results, function(index, value) {
     tab.push(value.id.videoId);
-    html += '<ion-button class="button button-full" onClick=\'urli(tab)\'>';
-    html += '<a id='+i+' href="https://www.youtube.com/watch?v=' + value.id.videoId + '"' + 'target="_blank"> <p><img src=' + value.snippet.thumbnails.high.url + ' width="380" height="260"></p></a>';
-    html +='</ion-button>';
+    var mangetab=tab[i];
+    html += '<button id='+i+' class="button button-full" onClick=\'urli('+tab+')\'>';
+    html += '<a href="https://www.youtube.com/watch?v=' + value.id.videoId + '"' + 'target="_blank"> <p><img src=' + value.snippet.thumbnails.high.url + ' width="380" height="260"></p></a>';
+    html +='</button>';
     i++;
     //console.log("https://www.youtube.com/watch?v=" + value.id.videoId);
 
