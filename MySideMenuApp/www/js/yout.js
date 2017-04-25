@@ -14,11 +14,11 @@ function reinit_player() {
 };
 
 function onYouTubePlayerAPIReady() {
-//  player = new YT.Player('ytplayer', {
-//    height: '390',
-  //  width: '640',
-  //  videoId: 'NHHJHl8agHE'
-//  });
+    player = new YT.Player('ytplayer', {
+      height: '283',
+      width: '465',
+      videoId: 'NHHJHl8agHE'
+    });
 };
 
 $(function() {
@@ -54,9 +54,10 @@ function urli(i){
   document.getElementById("search-results").style.display = "block";
   var div_ytplayer = "<div id=\"ytplayer\"></div>";
   $('#container-player').html(div_ytplayer);
+  document.getElementById("container-player").style.display = "block";
   player = new YT.Player('ytplayer', {
-    height: '390',
-    width: '640',
+    height: '283',
+    width: '465',
     videoId: tab[i],
  //console.log(val);
 });
@@ -73,8 +74,8 @@ function showResults(results) {
   $.each(results, function(index, value) {
     tab.push(value.id.videoId);
     //console.log(value);
-    html += '<ion-button id='+i+' class="button button_video_search" onClick=\'urli('+i+')\'>';
-    html += '<div class="title_video"><h2>'+ value.snippet.title +'</h2></div><a href="https://www.youtube.com/watch?v=' + value.id.videoId + '"' + 'target="_blank"> <p><img src=' + value.snippet.thumbnails.high.url + ' width="380" height="260"></p></a>';
+    html += '<ion-button id='+i+' class="button button_video_search img_size" onClick=\'urli('+i+')\'>';
+    html += '<div class="title_video"><h2>'+ value.snippet.title +'</h2></div><img src=' + value.snippet.thumbnails.high.url + ' width="380" height="260">';
     html +='</ion-button>';
     i++;
     //console.log("https://www.youtube.com/watch?v=" + value.id.videoId);

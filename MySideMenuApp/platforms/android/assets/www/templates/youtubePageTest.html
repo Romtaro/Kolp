@@ -3,13 +3,14 @@
   <ion-content>
 
   <form id="search-term">
-    <input type="text" value="" placeholder="" size="30" id="query">
+    <input type="text" value="" placeholder="Recherche ici.." size="30" id="query">
     <!-- Remove asdf later -->
-    <button ion-button class='button'(click)="submit">Recherche</button>
+    <button ion-button class='button'(click)="submit" onsubmit="reinit_player();">Recherche</button>
   </form>
   <div id="search-results">
   </div>
-
+<div id="container-player">
   <div id="ytplayer"></div>
+</div>
   </ion-content>
 </ion-view>

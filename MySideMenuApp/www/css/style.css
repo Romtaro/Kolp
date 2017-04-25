@@ -27,7 +27,7 @@ h1.loader {
     0 3px 4px rgba(255, 255, 255, 0.2),
     0 0 20px rgba(255, 255, 255, 0.45);
 
-    animation: loading 0.85s ease-in-out infinite alternate;
+    animation: loading 0.95s ease-in-out infinite alternate;
 }
 
 @keyframes loading {
@@ -107,11 +107,11 @@ h1.loader {
 
 #info:hover {
    background-color: rgba(160, 140, 140, 0.96);
-   width: 32%;
+   width: 30%;
    height: 32px;
-   padding-top: 0.5%;
-   padding-left: 1%;
-   left:37%;
+   padding-top: 0.4%;
+   padding-left: 2%;
+   left:33%;
    transition: all .4s ease-in-out;
 
 }
@@ -222,17 +222,31 @@ margin-right:auto;
 }
 
 #container-player {
+  display: none;
   position: absolute;
   top: 150px;
-  left:22%;
-  z-index: 10;
+  left:31%;
+  z-index: 13;
   padding: 3%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 7px;
 }
+
+#ytplayer { border: 4px solid black;}
 
 #search-term {
   position: absolute;
   z-index: 9;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+  display: inline-grid;
+}
+
+#search-results {
+  position: absolute;
+  z-index: 12;
+  margin-top: 5.5%;
 }
 
 .welco {margin-left: 17%;}
@@ -296,5 +310,32 @@ width: 14%;
 
     .welco {margin-left: 0%;font-size-adjust: auto;}
 
+    .button_video_search {
+      width: 100%;
+      height: 200px;
+      padding-top: 5px;
+      margin-top: 13%;
+    }
+    .title_video h2 {  height: 25px;font-size: 13px;  width: 100%;}
+
+    #search-term .button {height: 20px;}
+
+    #ytplayer iframe {width: 80%;height: auto;}
+
+    .img_size {width: 46%;height: auto;}
+
+    #search-results .button {
+      width: 90%;
+    }
+
+    #container-player {
+      left:0;
+      width: 100%;
+    }
+
+    #ytplayer {
+      width: 100%;
+      height: 200px;
+    }
 
 }
