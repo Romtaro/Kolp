@@ -42,26 +42,24 @@ function getRequest(searchTerm) {
     showResults(data.items);
   });
 };
-function urli(val){
-  console.log(val);
+function urli(i){
   player = new YT.Player('search-results', {
     height: '390',
     width: '640',
-    videoId: val[0]
-//console.log(val);
+    videoId: tab[i]
+ //console.log(val);
 });
-}
-
+console.log(val);
+};
 function showResults(results) {
   var html = "";
   //console.log(results);
 
   $.each(results, function(index, value) {
     tab.push(value.id.videoId);
-    var mangetab=tab[i];
-    html += '<button id='+i+' class="button button-full" onClick=\'urli('+tab+')\'>';
+    html += '<ion-button id='+i+' class="button button-full" onClick=\'urli('+i+')\'>';
     html += '<a href="https://www.youtube.com/watch?v=' + value.id.videoId + '"' + 'target="_blank"> <p><img src=' + value.snippet.thumbnails.high.url + ' width="380" height="260"></p></a>';
-    html +='</button>';
+    html +='</ion-button>';
     i++;
     //console.log("https://www.youtube.com/watch?v=" + value.id.videoId);
 
