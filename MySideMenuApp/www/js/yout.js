@@ -1,10 +1,10 @@
 // Load the IFrame Player API code asynchronously.
-
+var i = 0;
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/player_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
+var tab=[];
 // Replace the 'ytplayer' element with an <iframe> and
 // YouTube player after the API code downloads.
 var player;
@@ -42,25 +42,24 @@ function getRequest(searchTerm) {
     showResults(data.items);
   });
 };
-
+function urli(val){
+  console.log(val);
+//console.log(tab);
+}
 function showResults(results) {
   var html = "";
   //console.log(results);
- var tab=[];
+
   $.each(results, function(index, value) {
     tab.push(value.id.videoId);
-    html += '<button ion-button class=\'button\' (click)=\'url()\'>';
-    html += '<a href="https://www.youtube.com/watch?v=' + value.id.videoId + '"' + 'target="_blank"> <p><img src=' + value.snippet.thumbnails.high.url + ' width="380" height="260"></p></a>';
-    html +='</button>';
+    html += '<ion-button class="button button-full" onClick=\'urli(tab)\'>';
+    html += '<a id='+i+' href="https://www.youtube.com/watch?v=' + value.id.videoId + '"' + 'target="_blank"> <p><img src=' + value.snippet.thumbnails.high.url + ' width="380" height="260"></p></a>';
+    html +='</ion-button>';
+    i++;
     //console.log("https://www.youtube.com/watch?v=" + value.id.videoId);
 
   //console.log(tab);
   });
   $('#search-results').html(html);
     console.log(tab);// on recupe fin de url dans un tableau oklm
-};
-
-function url(){
-  console.log('coucou');
-//console.log(tab);
 }
