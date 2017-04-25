@@ -88,5 +88,5 @@ function showResults(results) {
   //console.log(tab);
   });
   $('#search-results').html(html);
-    console.log(tab);// on recupe fin de url dans un tableau oklm
+    console.log(tab);//on recupe fin de url dans un tableau oklm
 };
