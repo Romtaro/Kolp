@@ -101,13 +101,13 @@ h1.loader {
         bottom: 4%;
         border-radius: 4px;
         color:white;
-        width: 26%;
+        width: auto;
         height: 30px;
       }
 
 #info:hover {
    background-color: rgba(160, 140, 140, 0.96);
-   width: 27%;
+   width: 32%;
    height: 32px;
    padding-top: 0.5%;
    padding-left: 1%;
