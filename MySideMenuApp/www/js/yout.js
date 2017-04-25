@@ -56,8 +56,8 @@ function urli(i){
   $('#container-player').html(div_ytplayer);
   document.getElementById("container-player").style.display = "block";
   player = new YT.Player('ytplayer', {
-    height: '283',
-    width: '465',
+    height: '385',
+    width: '645',
     videoId: tab[i],
  //console.log(val);
 });
