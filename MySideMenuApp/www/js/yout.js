@@ -63,6 +63,10 @@ function urli(i){
 });
 };
 
+function addplaylist(i){
+console.log(tab[i]);
+}
+
 function showResults(results) {
   document.getElementById("search-results").style.display = "block";
   var html = "";
@@ -77,6 +81,7 @@ function showResults(results) {
     html += '<ion-button id='+i+' class="button button_video_search img_size" onClick=\'urli('+i+')\'>';
     html += '<div class="title_video"><h2>'+ value.snippet.title +'</h2></div><img src=' + value.snippet.thumbnails.high.url + ' width="380" height="260">';
     html +='</ion-button>';
+    html += '<ion-button class="button" onClick=\'addplaylist('+i+')\'>Ajout Playlist</ion-button>';
     i++;
     //console.log("https://www.youtube.com/watch?v=" + value.id.videoId);
 
