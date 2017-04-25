@@ -221,7 +221,19 @@ margin-right:auto;
   text-align: left;
 }
 
+#container-player {
+  position: absolute;
+  top: 150px;
+  left:22%;
+  z-index: 10;
+  padding: 3%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
+#search-term {
+  position: absolute;
+  z-index: 9;
+}
 
 .welco {margin-left: 17%;}
 
@@ -230,6 +242,22 @@ width: 14%;
 }
 
 
+.title_video h2 {
+  font-size: 18px;
+  width: 75%;
+  height: 55px;
+  margin-bottom: 15px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button_video_search {
+  width: 45%;
+  height: auto;
+  margin-left: 2.5%;
+  margin-right: 2%;
+}
 @media screen and (max-width:768px)
 {
     #info {

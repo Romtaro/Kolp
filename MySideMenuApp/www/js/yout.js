@@ -1,5 +1,5 @@
 // Load the IFrame Player API code asynchronously.
-var i = 0;
+var i;
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/player_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -8,6 +8,10 @@ var tab=[];
 // Replace the 'ytplayer' element with an <iframe> and
 // YouTube player after the API code downloads.
 var player;
+
+function reinit_player() {
+  document.getElementById("ytplayer").innerHTML = "";
+};
 
 function onYouTubePlayerAPIReady() {
 //  player = new YT.Player('ytplayer', {
@@ -33,7 +37,7 @@ function getRequest(searchTerm) {
     safeSearch: 'none',
     q: searchTerm,
     type: 'video',
-    maxResults: '15',
+    maxResults: '16',
     key: 'AIzaSyDSRCxZb9YtVsb7AwvHYmcftv0_zFddVxY',
   };
   url = 'https://www.googleapis.com/youtube/v3/search';
@@ -45,28 +49,32 @@ function getRequest(searchTerm) {
 };
 
 function urli(i){
-  document.getElementById("ytplayer").innerHTML = " ";
-  document.getElementById("search-results").style.display = "none";
+  console.log(i);
+  console.log(tab[i]);
+  document.getElementById("search-results").style.display = "block";
+  var div_ytplayer = "<div id=\"ytplayer\"></div>";
+  $('#container-player').html(div_ytplayer);
   player = new YT.Player('ytplayer', {
     height: '390',
     width: '640',
     videoId: tab[i],
  //console.log(val);
 });
-i = 0;
-tab = [];
-//console.log(i);
 };
 
 function showResults(results) {
   document.getElementById("search-results").style.display = "block";
   var html = "";
   //console.log(results);
-
+  i = 0;
+  tab = [];
+  var load = "Loading...";
+  $('#container-player').html(load);
   $.each(results, function(index, value) {
     tab.push(value.id.videoId);
-    html += '<ion-button id='+i+' class="button " onClick=\'urli('+i+')\'>';
-    html += '<h2>{{video.title}}</h2><a href="https://www.youtube.com/watch?v=' + value.id.videoId + '"' + 'target="_blank"> <p><img src=' + value.snippet.thumbnails.high.url + ' width="380" height="260"></p></a>';
+    //console.log(value);
+    html += '<ion-button id='+i+' class="button button_video_search" onClick=\'urli('+i+')\'>';
+    html += '<div class="title_video"><h2>'+ value.snippet.title +'</h2></div><a href="https://www.youtube.com/watch?v=' + value.id.videoId + '"' + 'target="_blank"> <p><img src=' + value.snippet.thumbnails.high.url + ' width="380" height="260"></p></a>';
     html +='</ion-button>';
     i++;
     //console.log("https://www.youtube.com/watch?v=" + value.id.videoId);
@@ -75,10 +83,4 @@ function showResults(results) {
   });
   $('#search-results').html(html);
     console.log(tab);// on recupe fin de url dans un tableau oklm
-};
-
-function reinit_player() {
-  var reinit_empty = " ";
-  document.getElementById("ytplayer").innerHTML = reinit_empty;
-
 };
